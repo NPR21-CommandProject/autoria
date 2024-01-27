@@ -63,7 +63,7 @@ namespace AutoriaWinForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -78,29 +78,29 @@ namespace AutoriaWinForm
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-            txtEmail.Text = string.Empty; 
+            txtEmail.Text = string.Empty;
 
-           // TextBox clickedTextBox = (TextBox)sender;
-            
-           // TextBoxState currentTxt = new TextBoxState
-           // {
-           //     Text = clickedTextBox.Text,
-           //     BackColor = clickedTextBox.BackColor,
-           //     ForeColor = clickedTextBox.ForeColor
-           // };
-           //if (clickedTextBox == txtEmail)
-           // {
-           //     //RestoreTxt(txtPass, previousValue);
-           //     //previousValue = currentTxt;
-                   
-           // }
-           //else if (clickedTextBox == txtPass)
-           // {
-           //     //RestoreTxt(txtEmail, previousValue);
-           //     //previousValue = currentTxt;
-           // }
+            // TextBox clickedTextBox = (TextBox)sender;
+
+            // TextBoxState currentTxt = new TextBoxState
+            // {
+            //     Text = clickedTextBox.Text,
+            //     BackColor = clickedTextBox.BackColor,
+            //     ForeColor = clickedTextBox.ForeColor
+            // };
+            //if (clickedTextBox == txtEmail)
+            // {
+            //     //RestoreTxt(txtPass, previousValue);
+            //     //previousValue = currentTxt;
+
+            // }
+            //else if (clickedTextBox == txtPass)
+            // {
+            //     //RestoreTxt(txtEmail, previousValue);
+            //     //previousValue = currentTxt;
+            // }
         }
-       private void RestoreTxt(TextBox textBox)
+        private void RestoreTxt(TextBox textBox)
         {
             //textBox.Text = string.Empty;
             //textBox.BackColor = txtState.BackColor;
@@ -109,10 +109,14 @@ namespace AutoriaWinForm
 
         private void txtPass_Click_1(object sender, EventArgs e)
         {
-           
-           txtPass.Text = string.Empty;
+
+            txtPass.Text = string.Empty;
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

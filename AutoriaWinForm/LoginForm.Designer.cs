@@ -29,32 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnLogin = new Button();
             label1 = new Label();
             txtEmail = new TextBox();
             txtPass = new TextBox();
+            label2 = new Label();
+            pbTiger = new PictureBox();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pbTiger).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnLogin
             // 
-            resources.ApplyResources(button1, "button1");
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(button2, "button2");
-            button2.Name = "button2";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            resources.ApplyResources(button3, "button3");
-            button3.Name = "button3";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnLogin.BackColor = SystemColors.ActiveCaptionText;
+            resources.ApplyResources(btnLogin, "btnLogin");
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Name = "btnLogin";
+            btnLogin.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -79,31 +70,52 @@
             txtPass.Click += txtPass_Click_1;
             txtPass.TextChanged += textBox2_TextChanged;
             // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            // 
+            // pbTiger
+            // 
+            resources.ApplyResources(pbTiger, "pbTiger");
+            pbTiger.Name = "pbTiger";
+            pbTiger.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ControlLight;
+            resources.ApplyResources(button1, "button1");
+            button1.Name = "button1";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // LoginForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button1);
+            Controls.Add(pbTiger);
+            Controls.Add(label2);
             Controls.Add(txtPass);
             Controls.Add(txtEmail);
             Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnLogin);
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
             Load += LoginForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pbTiger).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnLogin;
         private Label label1;
         private TextBox txtEmail;
         public TextBox txtPass;
+        private Label label2;
+        private PictureBox pbTiger;
+        private Button button1;
     }
 }
