@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             vScrollBar1 = new VScrollBar();
-            Signin_btn = new Button();
-            Signup_btn = new Button();
-            Exit = new Button();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            SignIn_btn = new Button();
+            SignUp_btn = new Button();
+            Exit_btn = new Button();
+            Sell_btn = new Button();
+            SearchTextBox = new TextBox();
             label1 = new Label();
-            comboBox1 = new ComboBox();
+            Type_comboBox = new ComboBox();
             label2 = new Label();
             label3 = new Label();
-            comboBox2 = new ComboBox();
+            Brand_comboBox = new ComboBox();
             label4 = new Label();
-            comboBox3 = new ComboBox();
+            Model_comboBox = new ComboBox();
             label5 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            comboBox4 = new ComboBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            PriceFrom_textBox = new TextBox();
+            PriceTo_textBox = new TextBox();
+            Сurrency_comboBox = new ComboBox();
+            MlgTo_textBox = new TextBox();
+            MlgFrom_textBox = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            VlmTo_textBox = new TextBox();
+            VlmFrom_textBox = new TextBox();
             label7 = new Label();
+            dataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // vScrollBar1
@@ -60,271 +62,307 @@
             vScrollBar1.Size = new Size(17, 601);
             vScrollBar1.TabIndex = 2;
             // 
-            // Signin_btn
+            // SignIn_btn
             // 
-            Signin_btn.Location = new Point(12, 9);
-            Signin_btn.Name = "Signin_btn";
-            Signin_btn.Size = new Size(132, 30);
-            Signin_btn.TabIndex = 3;
-            Signin_btn.Text = "Увійти";
-            Signin_btn.UseVisualStyleBackColor = true;
+            SignIn_btn.Location = new Point(12, 9);
+            SignIn_btn.Name = "SignIn_btn";
+            SignIn_btn.Size = new Size(132, 30);
+            SignIn_btn.TabIndex = 3;
+            SignIn_btn.Text = "Sign In";
+            SignIn_btn.UseVisualStyleBackColor = true;
             // 
-            // Signup_btn
+            // SignUp_btn
             // 
-            Signup_btn.Location = new Point(150, 9);
-            Signup_btn.Name = "Signup_btn";
-            Signup_btn.Size = new Size(132, 30);
-            Signup_btn.TabIndex = 4;
-            Signup_btn.Text = "Зареєструватися";
-            Signup_btn.UseVisualStyleBackColor = true;
+            SignUp_btn.Location = new Point(150, 9);
+            SignUp_btn.Name = "SignUp_btn";
+            SignUp_btn.Size = new Size(132, 30);
+            SignUp_btn.TabIndex = 4;
+            SignUp_btn.Text = "Sign Up";
+            SignUp_btn.UseVisualStyleBackColor = true;
             // 
-            // Exit
+            // Exit_btn
             // 
-            Exit.Location = new Point(1260, 9);
-            Exit.Name = "Exit";
-            Exit.Size = new Size(132, 30);
-            Exit.TabIndex = 5;
-            Exit.Text = "Вихід";
-            Exit.UseVisualStyleBackColor = true;
+            Exit_btn.Location = new Point(1260, 9);
+            Exit_btn.Name = "Exit_btn";
+            Exit_btn.Size = new Size(132, 30);
+            Exit_btn.TabIndex = 5;
+            Exit_btn.Text = "Exit";
+            Exit_btn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Sell_btn
             // 
-            button1.Location = new Point(903, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(288, 30);
-            button1.TabIndex = 6;
-            button1.Text = "Продати авто";
-            button1.UseVisualStyleBackColor = true;
+            Sell_btn.Location = new Point(903, 9);
+            Sell_btn.Name = "Sell_btn";
+            Sell_btn.Size = new Size(288, 30);
+            Sell_btn.TabIndex = 6;
+            Sell_btn.Text = "Sell car";
+            Sell_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // SearchTextBox
             // 
-            textBox1.Location = new Point(520, 9);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(291, 30);
-            textBox1.TabIndex = 7;
+            SearchTextBox.Location = new Point(520, 9);
+            SearchTextBox.Multiline = true;
+            SearchTextBox.Name = "SearchTextBox";
+            SearchTextBox.Size = new Size(291, 30);
+            SearchTextBox.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(388, 9);
             label1.Name = "label1";
-            label1.Size = new Size(126, 30);
+            label1.Size = new Size(110, 30);
             label1.TabIndex = 8;
-            label1.Text = "Пошук авто";
+            label1.Text = "Car search";
             // 
-            // comboBox1
+            // Type_comboBox
             // 
-            comboBox1.Font = new Font("Segoe UI", 12F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 141);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(217, 29);
-            comboBox1.TabIndex = 9;
-            comboBox1.Text = "Усі типи транспорту";
+            Type_comboBox.Font = new Font("Segoe UI", 12F);
+            Type_comboBox.ForeColor = SystemColors.WindowFrame;
+            Type_comboBox.FormattingEnabled = true;
+            Type_comboBox.Items.AddRange(new object[] { "Легкові", "Мото", "Вантажівки", "Причепи", "Спецтехніка", "Сільгосптехніка", "Автобуси", "Водний транспорт", "Повітряний транспорт", "Автобудинки" });
+            Type_comboBox.Location = new Point(12, 141);
+            Type_comboBox.Name = "Type_comboBox";
+            Type_comboBox.Size = new Size(217, 29);
+            Type_comboBox.TabIndex = 9;
+            Type_comboBox.Text = "All types of transport";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(12, 117);
             label2.Name = "label2";
-            label2.Size = new Size(127, 21);
+            label2.Size = new Size(137, 21);
             label2.TabIndex = 10;
-            label2.Text = "Тип транспорту";
+            label2.Text = "Type of transport";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(12, 177);
             label3.Name = "label3";
-            label3.Size = new Size(59, 21);
+            label3.Size = new Size(53, 21);
             label3.TabIndex = 12;
-            label3.Text = "Марка";
+            label3.Text = "Brand";
             // 
-            // comboBox2
+            // Brand_comboBox
             // 
-            comboBox2.Font = new Font("Segoe UI", 12F);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(12, 201);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(217, 29);
-            comboBox2.TabIndex = 11;
-            comboBox2.Text = "Оберіть";
+            Brand_comboBox.Font = new Font("Segoe UI", 12F);
+            Brand_comboBox.ForeColor = SystemColors.WindowFrame;
+            Brand_comboBox.FormattingEnabled = true;
+            Brand_comboBox.Location = new Point(12, 201);
+            Brand_comboBox.Name = "Brand_comboBox";
+            Brand_comboBox.Size = new Size(217, 29);
+            Brand_comboBox.TabIndex = 11;
+            Brand_comboBox.Text = "Choose";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label4.ForeColor = SystemColors.ControlLightLight;
             label4.Location = new Point(12, 240);
             label4.Name = "label4";
-            label4.Size = new Size(70, 21);
+            label4.Size = new Size(58, 21);
             label4.TabIndex = 14;
-            label4.Text = "Модель";
+            label4.Text = "Model";
             // 
-            // comboBox3
+            // Model_comboBox
             // 
-            comboBox3.Font = new Font("Segoe UI", 12F);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(12, 264);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(217, 29);
-            comboBox3.TabIndex = 13;
-            comboBox3.Text = "Оберіть";
+            Model_comboBox.Font = new Font("Segoe UI", 12F);
+            Model_comboBox.ForeColor = SystemColors.WindowFrame;
+            Model_comboBox.FormattingEnabled = true;
+            Model_comboBox.Location = new Point(12, 264);
+            Model_comboBox.Name = "Model_comboBox";
+            Model_comboBox.Size = new Size(217, 29);
+            Model_comboBox.TabIndex = 13;
+            Model_comboBox.Text = "Choose";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label5.ForeColor = SystemColors.ControlLightLight;
             label5.Location = new Point(12, 303);
             label5.Name = "label5";
-            label5.Size = new Size(43, 21);
+            label5.Size = new Size(46, 21);
             label5.TabIndex = 15;
-            label5.Text = "Ціна";
+            label5.Text = "Price";
             // 
-            // textBox2
+            // PriceFrom_textBox
             // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(12, 327);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(70, 29);
-            textBox2.TabIndex = 16;
-            textBox2.Text = "від";
+            PriceFrom_textBox.Font = new Font("Segoe UI", 12F);
+            PriceFrom_textBox.ForeColor = SystemColors.WindowFrame;
+            PriceFrom_textBox.Location = new Point(12, 327);
+            PriceFrom_textBox.Name = "PriceFrom_textBox";
+            PriceFrom_textBox.Size = new Size(70, 29);
+            PriceFrom_textBox.TabIndex = 16;
+            PriceFrom_textBox.Text = "from";
             // 
-            // textBox3
+            // PriceTo_textBox
             // 
-            textBox3.Font = new Font("Segoe UI", 12F);
-            textBox3.Location = new Point(88, 327);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(70, 29);
-            textBox3.TabIndex = 17;
-            textBox3.Text = "до";
+            PriceTo_textBox.Font = new Font("Segoe UI", 12F);
+            PriceTo_textBox.ForeColor = SystemColors.WindowFrame;
+            PriceTo_textBox.Location = new Point(88, 327);
+            PriceTo_textBox.Name = "PriceTo_textBox";
+            PriceTo_textBox.Size = new Size(70, 29);
+            PriceTo_textBox.TabIndex = 17;
+            PriceTo_textBox.Text = "to";
             // 
-            // comboBox4
+            // Сurrency_comboBox
             // 
-            comboBox4.Font = new Font("Segoe UI", 12F);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(164, 327);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(65, 29);
-            comboBox4.TabIndex = 18;
-            comboBox4.Text = "$";
+            Сurrency_comboBox.Font = new Font("Segoe UI", 12F);
+            Сurrency_comboBox.ForeColor = SystemColors.WindowText;
+            Сurrency_comboBox.FormattingEnabled = true;
+            Сurrency_comboBox.Items.AddRange(new object[] { "$", "€", "₴" });
+            Сurrency_comboBox.Location = new Point(164, 327);
+            Сurrency_comboBox.Name = "Сurrency_comboBox";
+            Сurrency_comboBox.Size = new Size(65, 29);
+            Сurrency_comboBox.TabIndex = 18;
+            Сurrency_comboBox.Text = "$";
             // 
-            // textBox4
+            // MlgTo_textBox
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox4.Location = new Point(126, 392);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(103, 29);
-            textBox4.TabIndex = 21;
-            textBox4.Text = "до";
+            MlgTo_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            MlgTo_textBox.ForeColor = SystemColors.WindowFrame;
+            MlgTo_textBox.Location = new Point(126, 392);
+            MlgTo_textBox.Name = "MlgTo_textBox";
+            MlgTo_textBox.Size = new Size(103, 29);
+            MlgTo_textBox.TabIndex = 21;
+            MlgTo_textBox.Text = "to";
             // 
-            // textBox5
+            // MlgFrom_textBox
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox5.Location = new Point(12, 392);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(108, 29);
-            textBox5.TabIndex = 20;
-            textBox5.Text = "від";
+            MlgFrom_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            MlgFrom_textBox.ForeColor = SystemColors.WindowFrame;
+            MlgFrom_textBox.Location = new Point(12, 392);
+            MlgFrom_textBox.Name = "MlgFrom_textBox";
+            MlgFrom_textBox.Size = new Size(108, 29);
+            MlgFrom_textBox.TabIndex = 20;
+            MlgFrom_textBox.Text = "from";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label6.ForeColor = SystemColors.ControlLightLight;
             label6.Location = new Point(12, 368);
             label6.Name = "label6";
-            label6.Size = new Size(132, 21);
+            label6.Size = new Size(181, 21);
             label6.TabIndex = 19;
-            label6.Text = "Пробіг (тис. км.)";
+            label6.Text = "Mileage (thousand km.)";
             // 
-            // textBox6
+            // VlmTo_textBox
             // 
-            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox6.Location = new Point(126, 456);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(103, 29);
-            textBox6.TabIndex = 24;
-            textBox6.Text = "до";
+            VlmTo_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            VlmTo_textBox.ForeColor = SystemColors.WindowFrame;
+            VlmTo_textBox.Location = new Point(126, 456);
+            VlmTo_textBox.Name = "VlmTo_textBox";
+            VlmTo_textBox.Size = new Size(103, 29);
+            VlmTo_textBox.TabIndex = 24;
+            VlmTo_textBox.Text = "to";
             // 
-            // textBox7
+            // VlmFrom_textBox
             // 
-            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox7.Location = new Point(12, 456);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(108, 29);
-            textBox7.TabIndex = 23;
-            textBox7.Text = "від";
+            VlmFrom_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            VlmFrom_textBox.ForeColor = SystemColors.WindowFrame;
+            VlmFrom_textBox.Location = new Point(12, 456);
+            VlmFrom_textBox.Name = "VlmFrom_textBox";
+            VlmFrom_textBox.Size = new Size(108, 29);
+            VlmFrom_textBox.TabIndex = 23;
+            VlmFrom_textBox.Text = "from";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label7.ForeColor = SystemColors.ControlLightLight;
             label7.Location = new Point(12, 432);
             label7.Name = "label7";
-            label7.Size = new Size(145, 21);
+            label7.Size = new Size(139, 21);
             label7.TabIndex = 22;
-            label7.Text = "Об'єм двигуна (л.)";
+            label7.Text = "Engine volume (l.)";
+            // 
+            // dataGridView
+            // 
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Location = new Point(314, 86);
+            dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.Size = new Size(1050, 485);
+            dataGridView.TabIndex = 25;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlText;
+            BackgroundImage = Properties.Resources.photo_2024_01_27_16_46_561;
             ClientSize = new Size(1421, 619);
-            Controls.Add(textBox6);
-            Controls.Add(textBox7);
+            Controls.Add(dataGridView);
+            Controls.Add(VlmTo_textBox);
+            Controls.Add(VlmFrom_textBox);
             Controls.Add(label7);
-            Controls.Add(textBox4);
-            Controls.Add(textBox5);
+            Controls.Add(MlgTo_textBox);
+            Controls.Add(MlgFrom_textBox);
             Controls.Add(label6);
-            Controls.Add(comboBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(Сurrency_comboBox);
+            Controls.Add(PriceTo_textBox);
+            Controls.Add(PriceFrom_textBox);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(comboBox3);
+            Controls.Add(Model_comboBox);
             Controls.Add(label3);
-            Controls.Add(comboBox2);
+            Controls.Add(Brand_comboBox);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
+            Controls.Add(Type_comboBox);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(Exit);
-            Controls.Add(Signup_btn);
-            Controls.Add(Signin_btn);
+            Controls.Add(SearchTextBox);
+            Controls.Add(Sell_btn);
+            Controls.Add(Exit_btn);
+            Controls.Add(SignUp_btn);
+            Controls.Add(SignIn_btn);
             Controls.Add(vScrollBar1);
+            ForeColor = SystemColors.ControlText;
             Name = "MainForm";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private VScrollBar vScrollBar1;
-        private Button Signin_btn;
-        private Button Signup_btn;
-        private Button Exit;
-        private Button button1;
-        private TextBox textBox1;
+        private Button SignIn_btn;
+        private Button SignUp_btn;
+        private Button Exit_btn;
+        private Button Sell_btn;
+        private TextBox SearchTextBox;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox Type_comboBox;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox2;
+        private ComboBox Brand_comboBox;
         private Label label4;
-        private ComboBox comboBox3;
+        private ComboBox Model_comboBox;
         private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private ComboBox comboBox4;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox PriceFrom_textBox;
+        private TextBox PriceTo_textBox;
+        private ComboBox Сurrency_comboBox;
+        private TextBox MlgTo_textBox;
+        private TextBox MlgFrom_textBox;
         private Label label6;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private TextBox VlmTo_textBox;
+        private TextBox VlmFrom_textBox;
         private Label label7;
+        private DataGridView dataGridView;
     }
 }
