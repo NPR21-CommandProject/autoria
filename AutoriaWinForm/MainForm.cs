@@ -8,14 +8,14 @@ namespace AutoriaWinForm
         public MainForm()
         {
             InitializeComponent();
-            UserEntity kot=new UserEntity
+            UserEntity kot = new UserEntity
             {
-                FirstName="Котик",
-                LastName="Рижикт",
-                Email="kotyk@gmail.com",
-                Password="123456",
-                DateCreated=DateTime.Now,
-                Phone="+380 97 638 87 34"
+                FirstName = "Котик",
+                LastName = "Рижикт",
+                Email = "kotyk@gmail.com",
+                Password = "123456",
+                DateCreated = DateTime.Now,
+                Phone = "+380 97 638 87 34"
             };
             AutoriaContext context = new AutoriaContext();
             context.Users.Add(kot);
@@ -27,6 +27,12 @@ namespace AutoriaWinForm
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //
     }
 }
 //
