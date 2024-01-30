@@ -13,27 +13,14 @@ namespace AutoriaWinForm
 {
     public partial class LoginForm : Form
     {
-        private class TextBoxState
-        {
-            public string Text { get; set; }
-            public Color BackColor { get; set; }
-            public Color ForeColor { get; set; }
-        }
-
-        private TextBoxState previousValue;
-
+       
+        public MainForm registerForm = new MainForm();
 
         public LoginForm()
         {
             InitializeComponent();
 
-            previousValue = new TextBoxState
-            {
-                Text = txtEmail.Text,
-                BackColor = txtEmail.BackColor,
-                ForeColor = txtEmail.ForeColor
-            };
-
+           
         }
 
         private void lbPass_Click(object sender, EventArgs e)
@@ -116,7 +103,8 @@ namespace AutoriaWinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            registerForm.ShowDialog();
         }
     }
 }

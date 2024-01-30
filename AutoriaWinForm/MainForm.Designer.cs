@@ -41,6 +41,7 @@
             RegistrationButton = new Button();
             AlreadyRegisterdButton = new Button();
             CancelButton = new Button();
+            tbSurname = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -60,11 +61,16 @@
             // NameSurnameTextBox
             // 
             NameSurnameTextBox.Cursor = Cursors.IBeam;
-            NameSurnameTextBox.Location = new Point(275, 108);
+            NameSurnameTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            NameSurnameTextBox.ForeColor = SystemColors.ScrollBar;
+            NameSurnameTextBox.Location = new Point(275, 75);
             NameSurnameTextBox.Multiline = true;
             NameSurnameTextBox.Name = "NameSurnameTextBox";
             NameSurnameTextBox.Size = new Size(267, 34);
             NameSurnameTextBox.TabIndex = 1;
+            NameSurnameTextBox.Text = "Name";
+            NameSurnameTextBox.Click += NameSurnameTextBox_Click;
+            NameSurnameTextBox.TextChanged += NameSurnameTextBox_TextChanged;
             // 
             // pictureBox1
             // 
@@ -89,29 +95,41 @@
             // PasswordTextBox
             // 
             PasswordTextBox.Cursor = Cursors.IBeam;
-            PasswordTextBox.Location = new Point(275, 184);
+            PasswordTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            PasswordTextBox.ForeColor = SystemColors.ScrollBar;
+            PasswordTextBox.Location = new Point(275, 197);
             PasswordTextBox.Multiline = true;
             PasswordTextBox.Name = "PasswordTextBox";
             PasswordTextBox.Size = new Size(267, 34);
             PasswordTextBox.TabIndex = 4;
+            PasswordTextBox.Text = "Password";
+            PasswordTextBox.Click += PasswordTextBox_Click;
             // 
             // EmailTextBox
             // 
             EmailTextBox.Cursor = Cursors.IBeam;
+            EmailTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            EmailTextBox.ForeColor = SystemColors.ScrollBar;
             EmailTextBox.Location = new Point(275, 259);
             EmailTextBox.Multiline = true;
             EmailTextBox.Name = "EmailTextBox";
             EmailTextBox.Size = new Size(267, 34);
             EmailTextBox.TabIndex = 5;
+            EmailTextBox.Text = "Email";
+            EmailTextBox.Click += EmailTextBox_Click;
             // 
             // PhoneTextBox
             // 
             PhoneTextBox.Cursor = Cursors.IBeam;
+            PhoneTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            PhoneTextBox.ForeColor = SystemColors.ScrollBar;
             PhoneTextBox.Location = new Point(275, 334);
             PhoneTextBox.Multiline = true;
             PhoneTextBox.Name = "PhoneTextBox";
             PhoneTextBox.Size = new Size(267, 34);
             PhoneTextBox.TabIndex = 6;
+            PhoneTextBox.Text = "Phone numner";
+            PhoneTextBox.Click += PhoneTextBox_Click;
             // 
             // pictureBox3
             // 
@@ -142,8 +160,9 @@
             RegistrationButton.Name = "RegistrationButton";
             RegistrationButton.Size = new Size(155, 44);
             RegistrationButton.TabIndex = 9;
-            RegistrationButton.Text = "Registration";
+            RegistrationButton.Text = "Sign Up";
             RegistrationButton.UseVisualStyleBackColor = true;
+            RegistrationButton.Click += RegistrationButton_Click;
             // 
             // AlreadyRegisterdButton
             // 
@@ -156,6 +175,7 @@
             AlreadyRegisterdButton.TabIndex = 10;
             AlreadyRegisterdButton.Text = "Already Registerd?";
             AlreadyRegisterdButton.UseVisualStyleBackColor = true;
+            AlreadyRegisterdButton.Click += AlreadyRegisterdButton_Click;
             // 
             // CancelButton
             // 
@@ -170,11 +190,25 @@
             CancelButton.UseVisualStyleBackColor = true;
             CancelButton.Click += CancelButton_Click;
             // 
+            // tbSurname
+            // 
+            tbSurname.Cursor = Cursors.IBeam;
+            tbSurname.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            tbSurname.ForeColor = SystemColors.ScrollBar;
+            tbSurname.Location = new Point(275, 130);
+            tbSurname.Multiline = true;
+            tbSurname.Name = "tbSurname";
+            tbSurname.Size = new Size(267, 34);
+            tbSurname.TabIndex = 12;
+            tbSurname.Text = "Surname";
+            tbSurname.Click += tbSurname_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(777, 573);
+            Controls.Add(tbSurname);
             Controls.Add(CancelButton);
             Controls.Add(AlreadyRegisterdButton);
             Controls.Add(RegistrationButton);
@@ -212,5 +246,6 @@
         private Button RegistrationButton;
         private Button AlreadyRegisterdButton;
         private Button CancelButton;
+        private TextBox tbSurname;
     }
 }
