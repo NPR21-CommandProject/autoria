@@ -1,6 +1,6 @@
 ﻿namespace AutoriaWinForm
 {
-    partial class MainForm
+    partial class MainPageForm
     {
         /// <summary>
         ///  Required designer variable.

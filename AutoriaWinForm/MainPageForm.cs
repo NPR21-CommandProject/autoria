@@ -1,8 +1,8 @@
 namespace AutoriaWinForm
 {
-    public partial class MainForm : Form
+    public partial class MainPageForm : Form
     {
-        public MainForm()
+        public MainPageForm()
         {
             InitializeComponent();
         }
