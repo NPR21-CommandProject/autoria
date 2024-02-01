@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             vScrollBar1 = new VScrollBar();
-            SignIn_btn = new Button();
-            SignUp_btn = new Button();
             Exit_btn = new Button();
             Sell_btn = new Button();
             SearchTextBox = new TextBox();
@@ -52,7 +50,10 @@
             VlmFrom_textBox = new TextBox();
             label7 = new Label();
             dataGridView = new DataGridView();
+            pictureBox1 = new PictureBox();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // vScrollBar1
@@ -61,24 +62,6 @@
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(17, 601);
             vScrollBar1.TabIndex = 2;
-            // 
-            // SignIn_btn
-            // 
-            SignIn_btn.Location = new Point(12, 9);
-            SignIn_btn.Name = "SignIn_btn";
-            SignIn_btn.Size = new Size(132, 30);
-            SignIn_btn.TabIndex = 3;
-            SignIn_btn.Text = "Sign In";
-            SignIn_btn.UseVisualStyleBackColor = true;
-            // 
-            // SignUp_btn
-            // 
-            SignUp_btn.Location = new Point(150, 9);
-            SignUp_btn.Name = "SignUp_btn";
-            SignUp_btn.Size = new Size(132, 30);
-            SignUp_btn.TabIndex = 4;
-            SignUp_btn.Text = "Sign Up";
-            SignUp_btn.UseVisualStyleBackColor = true;
             // 
             // Exit_btn
             // 
@@ -100,10 +83,10 @@
             // 
             // SearchTextBox
             // 
-            SearchTextBox.Location = new Point(520, 9);
+            SearchTextBox.Location = new Point(470, 9);
             SearchTextBox.Multiline = true;
             SearchTextBox.Name = "SearchTextBox";
-            SearchTextBox.Size = new Size(291, 30);
+            SearchTextBox.Size = new Size(361, 30);
             SearchTextBox.TabIndex = 7;
             // 
             // label1
@@ -111,11 +94,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(388, 9);
+            label1.Location = new Point(345, 9);
             label1.Name = "label1";
             label1.Size = new Size(110, 30);
             label1.TabIndex = 8;
             label1.Text = "Car search";
+            label1.Click += label1_Click;
             // 
             // Type_comboBox
             // 
@@ -300,6 +284,25 @@
             dataGridView.Size = new Size(1050, 485);
             dataGridView.TabIndex = 25;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(23, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(47, 43);
+            pictureBox1.TabIndex = 26;
+            pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label8.ForeColor = SystemColors.ControlLight;
+            label8.Location = new Point(76, 12);
+            label8.Name = "label8";
+            label8.Size = new Size(70, 37);
+            label8.TabIndex = 27;
+            label8.Text = "User";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -307,6 +310,8 @@
             BackColor = SystemColors.ControlText;
             BackgroundImage = Properties.Resources.photo_2024_01_27_16_46_561;
             ClientSize = new Size(1421, 619);
+            Controls.Add(label8);
+            Controls.Add(pictureBox1);
             Controls.Add(dataGridView);
             Controls.Add(VlmTo_textBox);
             Controls.Add(VlmFrom_textBox);
@@ -328,21 +333,18 @@
             Controls.Add(SearchTextBox);
             Controls.Add(Sell_btn);
             Controls.Add(Exit_btn);
-            Controls.Add(SignUp_btn);
-            Controls.Add(SignIn_btn);
             Controls.Add(vScrollBar1);
             ForeColor = SystemColors.ControlText;
             Name = "MainForm";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private VScrollBar vScrollBar1;
-        private Button SignIn_btn;
-        private Button SignUp_btn;
         private Button Exit_btn;
         private Button Sell_btn;
         private TextBox SearchTextBox;
@@ -364,5 +366,7 @@
         private TextBox VlmFrom_textBox;
         private Label label7;
         private DataGridView dataGridView;
+        private PictureBox pictureBox1;
+        private Label label8;
     }
 }
