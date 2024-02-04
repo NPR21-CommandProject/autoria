@@ -32,7 +32,7 @@
             pbCarImage = new PictureBox();
             button1 = new Button();
             lbCarName = new Label();
-            button2 = new Button();
+            btnRightImage = new Button();
             lbPrice = new Label();
             lbOdometer = new Label();
             pictureBox2 = new PictureBox();
@@ -74,15 +74,16 @@
             lbCarName.TabIndex = 2;
             lbCarName.Text = "Audi S8/ 2007/ D3/ 5.2 FSI Tiptronic (450 к.с.) Quattro";
             // 
-            // button2
+            // btnRightImage
             // 
-            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(1293, 441);
-            button2.Name = "button2";
-            button2.Size = new Size(48, 37);
-            button2.TabIndex = 3;
-            button2.Text = "→";
-            button2.UseVisualStyleBackColor = true;
+            btnRightImage.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnRightImage.Location = new Point(1293, 441);
+            btnRightImage.Name = "btnRightImage";
+            btnRightImage.Size = new Size(48, 37);
+            btnRightImage.TabIndex = 3;
+            btnRightImage.Text = "→";
+            btnRightImage.UseVisualStyleBackColor = true;
+            btnRightImage.Click += btnRightImage_Click;
             // 
             // lbPrice
             // 
@@ -164,7 +165,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(lbOdometer);
             Controls.Add(lbPrice);
-            Controls.Add(button2);
+            Controls.Add(btnRightImage);
             Controls.Add(lbCarName);
             Controls.Add(button1);
             Controls.Add(pbCarImage);
@@ -182,7 +183,7 @@
         private PictureBox pbCarImage;
         private Button button1;
         private Label lbCarName;
-        private Button button2;
+        private Button btnRightImage;
         private Label lbPrice;
         private Label lbOdometer;
         private PictureBox pictureBox2;

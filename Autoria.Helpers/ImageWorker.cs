@@ -1,4 +1,4 @@
-﻿using SixLabors.ImageSharp;
+﻿using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Webp;
 
 namespace Autoria.Helpers
@@ -65,6 +65,23 @@ namespace Autoria.Helpers
                 Console.WriteLine("Помилка збереження фото {0}", ex.Message);
             }
             return null;
+        }
+
+        public static Stream GetFileStream(string path)
+        {
+            using (var image = Image.Load(path))
+            {
+
+                var ms = new MemoryStream();
+                
+                    image.Save(ms, new JpegEncoder());
+                    //image.Save(ms, new WebpEncoder());
+                    //var bytesOut = ms.ToArray();
+                    //File.WriteAllBytes(outPath, bytesOut);
+                    return ms;
+
+                
+            }
         }
     }
 }
