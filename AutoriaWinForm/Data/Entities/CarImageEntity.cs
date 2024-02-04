@@ -13,6 +13,12 @@ namespace AutoriaWinForm.Data.Entities
     {
         [Key]
         public int Id { get; set; }
-        public int MyProperty { get; set; }
+        [Required, StringLength(255)]
+        public string Name { get; set; }
+        public short Priority { get; set; }
+        public DateTime DateCreated { get; set; }
+        [ForeignKey("Car")]
+        public int CarId { get; set; }
+        public virtual CarEntity Car { get; set; }
     }
 }
