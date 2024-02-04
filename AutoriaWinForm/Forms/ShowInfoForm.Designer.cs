@@ -28,42 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvShowAllInfo = new DataGridView();
+            dgvShowAllUsers = new DataGridView();
             Users = new DataGridViewTextBoxColumn();
-            Cars = new DataGridViewTextBoxColumn();
             label1 = new Label();
             btnExit = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvShowAllInfo).BeginInit();
+            dgvShowAllCars = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvShowAllUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvShowAllCars).BeginInit();
             SuspendLayout();
             // 
-            // dgvShowAllInfo
+            // dgvShowAllUsers
             // 
-            dgvShowAllInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvShowAllInfo.Columns.AddRange(new DataGridViewColumn[] { Users, Cars });
-            dgvShowAllInfo.GridColor = Color.White;
-            dgvShowAllInfo.Location = new Point(31, 64);
-            dgvShowAllInfo.Name = "dgvShowAllInfo";
-            dgvShowAllInfo.Size = new Size(743, 317);
-            dgvShowAllInfo.TabIndex = 0;
+            dgvShowAllUsers.BackgroundColor = Color.Orange;
+            dgvShowAllUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvShowAllUsers.Columns.AddRange(new DataGridViewColumn[] { Users });
+            dgvShowAllUsers.GridColor = Color.White;
+            dgvShowAllUsers.Location = new Point(23, 37);
+            dgvShowAllUsers.Name = "dgvShowAllUsers";
+            dgvShowAllUsers.Size = new Size(393, 354);
+            dgvShowAllUsers.TabIndex = 0;
+            dgvShowAllUsers.CellContentClick += dgvShowAllUsers_CellContentClick;
             // 
             // Users
             // 
+            Users.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Users.HeaderText = "Users";
             Users.Name = "Users";
-            Users.Width = 350;
-            // 
-            // Cars
-            // 
-            Cars.HeaderText = "Cars";
-            Cars.Name = "Cars";
-            Cars.Width = 350;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(321, 9);
+            label1.Location = new Point(326, 9);
             label1.Name = "label1";
             label1.Size = new Size(183, 25);
             label1.TabIndex = 1;
@@ -73,35 +71,57 @@
             // 
             btnExit.BackColor = Color.Orange;
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            btnExit.Location = new Point(333, 406);
+            btnExit.Location = new Point(341, 406);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(138, 32);
             btnExit.TabIndex = 2;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
+            // dgvShowAllCars
+            // 
+            dgvShowAllCars.BackgroundColor = Color.Orange;
+            dgvShowAllCars.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvShowAllCars.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1 });
+            dgvShowAllCars.GridColor = Color.White;
+            dgvShowAllCars.Location = new Point(432, 37);
+            dgvShowAllCars.Name = "dgvShowAllCars";
+            dgvShowAllCars.Size = new Size(394, 354);
+            dgvShowAllCars.TabIndex = 3;
+            dgvShowAllCars.CellContentClick += dvgShowAllCars_CellContentClick;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "Cars";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 350;
             // 
             // ShowInfoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(848, 450);
+            Controls.Add(dgvShowAllCars);
             Controls.Add(btnExit);
             Controls.Add(label1);
-            Controls.Add(dgvShowAllInfo);
+            Controls.Add(dgvShowAllUsers);
             Name = "ShowInfoForm";
             Text = "InfoShowForm";
-            ((System.ComponentModel.ISupportInitialize)dgvShowAllInfo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvShowAllUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvShowAllCars).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvShowAllInfo;
-        private DataGridViewTextBoxColumn Users;
-        private DataGridViewTextBoxColumn Cars;
+        private DataGridView dgvShowAllUsers;
         private Label label1;
         private Button btnExit;
+        private DataGridView dgvShowAllCars;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Users;
     }
 }
