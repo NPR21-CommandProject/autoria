@@ -1,3 +1,4 @@
+using AutoriaWinForm.Data;
 using AutoriaWinForm.Forms;
 
 namespace AutoriaWinForm
@@ -15,7 +16,12 @@ namespace AutoriaWinForm
             ApplicationConfiguration.Initialize();
             //Application.Run(new AddNewInformationForm());
             //Application.Run(new MainForm());
+            SeedDatabase seedDatabase = new SeedDatabase();
+            seedDatabase.SeedCar();
+
             Application.Run(new ShowInfoForm());
+
+            
         }
     }
 }

@@ -47,11 +47,11 @@ namespace Autoria.Helpers
                                     image.Save(ms, new WebpEncoder());
                                     var bytesOut = ms.ToArray();
                                     File.WriteAllBytes(outPath, bytesOut);
-                                    return fileName;
+                                   
                                 }
                             }
                         }
-                        
+                        return fileName;
 
                     }
                     else
