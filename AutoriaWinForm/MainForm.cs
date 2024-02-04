@@ -39,6 +39,12 @@ namespace AutoriaWinForm
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //
     }
 }
 //
