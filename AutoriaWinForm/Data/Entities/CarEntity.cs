@@ -27,5 +27,6 @@ namespace AutoriaWinForm.Data.Entities
         public string FuelType { get; set; }
         [Required, StringLength(200)]
         public DateTime DateCreated { get; set; }
+        public virtual ICollection<CarImageEntity> CarImages { get; set; }
     }
 }

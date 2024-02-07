@@ -1,6 +1,11 @@
-﻿using System;
+﻿using _13.SimleForm.Options;
+using AutoriaWinForm.Data;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -105,6 +110,66 @@ namespace AutoriaWinForm
         {
             this.Hide();
             registerForm.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string login = txtEmail.Text;
+            string password = txtPass.Text;
+
+            using (var context = new AutoriaContext())
+            {
+                // Пошук користувача за логіном (Email або номером телефону)
+                var user = context.Users.FirstOrDefault(u => u.Email == login || u.Phone == login);
+
+                // Перевірка введених даних
+                if (user != null && password == user.Password)
+                {
+                    Close();
+                    Application.Run(new MainPageForm());
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                   
+                }
+            }
+
+
+
+            //    string conStr =
+            //        "Data Source=20.65.144.204;User ID=kaban;Password=9[nV`e7VN`0%;Initial Catalog=autoria;MultipleActiveResultSets=true;TrustServerCertificate=True;";
+            //    using (SqlConnection connection = new SqlConnection(conStr))
+            //    {
+            //        try
+            //        {
+            //            connection.Open();
+
+            //            // SQL-запит для отримання пароля за логіном з бази даних
+            //            string sqlQuery = $"SELECT Password FROM tblUsers WHERE Email = '{login}'";
+
+            //            // Створення об'єкта команди SQL
+            //            using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+            //            {
+            //                // Виконання SQL-запиту
+            //                string savePassword = (string)command.ExecuteScalar();
+
+            //                // Перевірка введених даних
+            //                if (savePassword != null && password == savePassword)
+            //                {
+
+            //                }
+            //                else
+            //                {
+            //                    MessageBox.Show("Error");
+            //                }
+            //            }
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            Console.WriteLine($"Помилка: {ex.Message}");
+            //        }
+            //    }
         }
     }
 }

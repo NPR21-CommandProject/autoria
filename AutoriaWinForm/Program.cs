@@ -1,3 +1,4 @@
+using AutoriaWinForm.Data;
 using AutoriaWinForm.Forms;
 
 namespace AutoriaWinForm
@@ -13,9 +14,14 @@ namespace AutoriaWinForm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new AddNewInformationForm());
+            //Application.Run(new LoginForm());
             //Application.Run(new MainForm());
-            Application.Run(new ShowInfoForm());
+            SeedDatabase seedDatabase = new SeedDatabase();
+            seedDatabase.SeedCar();
+
+            Application.Run(new ItemForm());
+
+            
         }
     }
 }
