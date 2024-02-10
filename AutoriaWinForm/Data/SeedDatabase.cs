@@ -25,9 +25,9 @@ namespace AutoriaWinForm.Data
                     Brand = "Audi",
                     FuelType = "Еклектро",
                     Model = "e-tron",
-                    EngineCapacity = 0,
+                    EngineCapacity ="0",
                     Odometer = "28 тис. км пробіг",
-                    Price = 1522762,
+                    Price = "1522762",
                     DateCreated = DateTime.Now
                 };
 
