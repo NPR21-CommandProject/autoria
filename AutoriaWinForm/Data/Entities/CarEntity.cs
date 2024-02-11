@@ -27,6 +27,14 @@ namespace AutoriaWinForm.Data.Entities
         public string FuelType { get; set; }
         [Required, StringLength(200)]
         public DateTime DateCreated { get; set; }
+        public int AddedByUserId { get; set; }
+
+       
+        [ForeignKey("AddedByUserId")] 
+        public virtual UserEntity AddedByUser { get; set; }
+
+       
         public virtual ICollection<CarImageEntity> CarImages { get; set; }
+        
     }
 }

@@ -15,11 +15,11 @@ namespace AutoriaWinForm
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new LoginForm());
-            //Application.Run(new MainForm());
+            Application.Run(new MainForm());
             SeedDatabase seedDatabase = new SeedDatabase();
             seedDatabase.SeedCar();
 
-            Application.Run(new ItemForm());
+          //  Application.Run(new ItemForm());
 
             
         }
