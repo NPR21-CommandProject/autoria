@@ -127,6 +127,7 @@ namespace AutoriaWinForm
                 {
                     Close();
                     Application.Run(new MainPageForm());
+                   
                 }
                 else
                 {

@@ -1,10 +1,13 @@
 ﻿using Autoria.Helpers;
 using AutoriaWinForm.Data.Entities;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace AutoriaWinForm.Data
 {
@@ -20,6 +23,8 @@ namespace AutoriaWinForm.Data
         {
             if(!_context.Cars.Any())
             {
+                
+
                 CarEntity car = new CarEntity
                 {
                     Brand = "Audi",
@@ -28,7 +33,9 @@ namespace AutoriaWinForm.Data
                     EngineCapacity = 0,
                     Odometer = "28 тис. км пробіг",
                     Price = 1522762,
-                    DateCreated = DateTime.Now
+                    DateCreated = DateTime.Now,
+                    
+                    
                 };
 
                 _context.Cars.Add(car);

@@ -36,9 +36,10 @@
             lbPrice = new Label();
             lbOdometer = new Label();
             pictureBox2 = new PictureBox();
-            label4 = new Label();
+            lbUserName = new Label();
             label5 = new Label();
             textBox1 = new TextBox();
+            lbUserSurnme = new Label();
             ((System.ComponentModel.ISupportInitialize)pbCarImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -116,7 +117,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(71, 163);
+            pictureBox2.Location = new Point(24, 132);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(91, 101);
@@ -124,18 +125,18 @@
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
-            // label4
+            // lbUserName
             // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.ControlText;
-            label4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(179, 163);
-            label4.Name = "label4";
-            label4.Size = new Size(258, 46);
-            label4.TabIndex = 7;
-            label4.Text = "НеПерекуп 777";
-            label4.Click += label4_Click;
+            lbUserName.AutoSize = true;
+            lbUserName.BackColor = SystemColors.ControlText;
+            lbUserName.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lbUserName.ForeColor = SystemColors.ControlLightLight;
+            lbUserName.Location = new Point(138, 132);
+            lbUserName.Name = "lbUserName";
+            lbUserName.Size = new Size(109, 46);
+            lbUserName.TabIndex = 7;
+            lbUserName.Text = "Name";
+            lbUserName.Click += label4_Click;
             // 
             // label5
             // 
@@ -143,7 +144,7 @@
             label5.BackColor = SystemColors.ControlText;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(179, 224);
+            label5.Location = new Point(37, 254);
             label5.Name = "label5";
             label5.Size = new Size(197, 37);
             label5.TabIndex = 8;
@@ -161,15 +162,28 @@
             textBox1.TabIndex = 9;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // lbUserSurnme
+            // 
+            lbUserSurnme.AutoSize = true;
+            lbUserSurnme.BackColor = SystemColors.ControlText;
+            lbUserSurnme.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            lbUserSurnme.ForeColor = SystemColors.ControlLightLight;
+            lbUserSurnme.Location = new Point(121, 178);
+            lbUserSurnme.Name = "lbUserSurnme";
+            lbUserSurnme.Size = new Size(152, 46);
+            lbUserSurnme.TabIndex = 10;
+            lbUserSurnme.Text = "Surname";
+            // 
             // ItemForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.photo_2024_01_27_16_46_561;
             ClientSize = new Size(1624, 989);
+            Controls.Add(lbUserSurnme);
             Controls.Add(textBox1);
             Controls.Add(label5);
-            Controls.Add(label4);
+            Controls.Add(lbUserName);
             Controls.Add(pictureBox2);
             Controls.Add(lbOdometer);
             Controls.Add(lbPrice);
@@ -181,6 +195,7 @@
             Name = "ItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ItemForm";
+            Load += ItemForm_Load;
             ((System.ComponentModel.ISupportInitialize)pbCarImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -196,8 +211,9 @@
         private Label lbPrice;
         private Label lbOdometer;
         private PictureBox pictureBox2;
-        private Label label4;
+        private Label lbUserName;
         private Label label5;
         private TextBox textBox1;
+        private Label lbUserSurnme;
     }
 }

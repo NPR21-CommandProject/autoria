@@ -64,11 +64,17 @@ namespace AutoriaWinForm
 
         private void label4_Click(object sender, EventArgs e)
         {
-            //var user = autoriaContext.Users.FirstOrDefault(u => u.Id == userId);
+
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ItemForm_Load(object sender, EventArgs e)
+        {
+
             var car = autoriaContext.Cars.FirstOrDefault(c => c.Id == CarId);
             if (car != null)
             {
@@ -76,8 +82,12 @@ namespace AutoriaWinForm
                 var user = autoriaContext.Users.FirstOrDefault(u => u.Id == userId);
                 if (user != null)
                 {
-                    string phoneNumber = user.PhoneNumber;
+                    string phoneNumber = user.Phone;
+                    string userName = user.FirstName;
+                    string userSurname = user.LastName;
                     label5.Text = phoneNumber;
+                    lbUserName.Text = userName;
+                    lbUserSurnme.Text = userSurname;
                 }
                 else
                 {
