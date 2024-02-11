@@ -75,11 +75,12 @@ namespace AutoriaWinForm
         private void ItemForm_Load(object sender, EventArgs e)
         {
 
-            var car = autoriaContext.Cars.FirstOrDefault(c => c.Id == CarId);
+            var car = autoriaContext.Cars
+                .Include(x=>x.AddedByUser)
+                .FirstOrDefault(c => c.Id == CarId);
             if (car != null)
             {
-                int userId = car.AddedByUserId;
-                var user = autoriaContext.Users.FirstOrDefault(u => u.Id == userId);
+                var user = car.AddedByUser; // autoriaContext.Users.FirstOrDefault(u => u.Id == userId);
                 if (user != null)
                 {
                     string phoneNumber = user.Phone;
