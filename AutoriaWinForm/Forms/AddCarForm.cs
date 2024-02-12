@@ -156,18 +156,7 @@ namespace AutoriaWinForm.Forms
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string imagePath = openFileDialog.FileName;
-                    string imageName = Path.GetFileName(imagePath);
-                    string folderName = "car_images";
-                    string savedImageName = ImageWorker.ImageSave(imagePath, folderName, imageName);
-                    if (savedImageName != null)
-                    {
-                        MessageBox.Show("Зображення успішно завантажено!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Помилка при завантаженні зображення.");
-
-                    }
+                    pictureBox1.Image=Image.FromFile(imagePath);
                 }
             }
         }
