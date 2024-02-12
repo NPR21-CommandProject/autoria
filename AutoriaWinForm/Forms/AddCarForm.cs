@@ -207,5 +207,34 @@ namespace AutoriaWinForm.Forms
         {
             txtBoxCarDecription.Text = string.Empty;
         }
+
+        private void lblCarFilter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxPrice_TextChanged_1(object sender, EventArgs e)
+        {
+            string inputData = txtBoxPrice.Text;
+            newCar.Price = inputData;
+        }
+
+        private void txtBoxOdometer_TextChanged(object sender, EventArgs e)
+        {
+            string inputData = txtBoxOdometer.Text;
+            newCar.Odometer = inputData;
+        }
+
+        private void txtBoxCapacity_TextChanged(object sender, EventArgs e)
+        {
+            string inputData = txtBoxCapacity.Text;
+            newCar.EngineCapacity = inputData;
+        }
+
+        private void txtBoxFuelType_TextChanged(object sender, EventArgs e)
+        {
+            string inputData = txtBoxFuelType.Text;
+            newCar.FuelType = inputData;
+        }
     }
 }
