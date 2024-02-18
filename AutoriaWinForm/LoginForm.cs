@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,7 +117,33 @@ namespace AutoriaWinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+        }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            String loginUser = txtEmail.Text;
+            String passUser = txtPass.Text;
+
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `password` = @uP", db.getConnection());
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+                MessageBox.Show("Yes");
+            else
+                MessageBox.Show("No");
         }
     }
 }
