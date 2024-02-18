@@ -38,7 +38,7 @@ namespace AutoriaWinForm.Forms
         {
             InitializeComponent();
             lvImages.LargeImageList = new ImageList();
-            lvImages.LargeImageList.ImageSize = new Size(90, 65);
+            lvImages.LargeImageList.ImageSize = new Size(180, 130);
            // lvImages.LargeImageList.
             lvImages.MultiSelect = false;
             lvImages.ListViewItemSorter = new ListViewIndexComparer();
@@ -129,17 +129,6 @@ namespace AutoriaWinForm.Forms
         }
         #endregion
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddCarForm_Load(object sender, EventArgs e)
         {
             vehicleTipeBox.Items.Add("Усі види транспорту");
@@ -161,15 +150,6 @@ namespace AutoriaWinForm.Forms
             newCar.VehicleType = selectedVehicleType;
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void vehicleMarkBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -223,20 +203,25 @@ namespace AutoriaWinForm.Forms
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Multiselect = true;
                 openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png, *.bmp, *.webp)|*.jpg;*.jpeg;*.png;*.bmp;*.webp|All files (*.*)|*.*";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string imagePath = openFileDialog.FileName;
-                    string key = Guid.NewGuid().ToString();
-                    ListViewItem item = new ListViewItem();
-                    item.Tag = imagePath;
-                    item.Text = Path.GetFileName(imagePath);
-                    item.ImageKey = key;
-                    var image = SixLabors.ImageSharp.Image.Load(imagePath);
-                    MemoryStream ms = new MemoryStream();
-                    image.Save(ms, new JpegEncoder());
-                    lvImages.LargeImageList.Images.Add(key, Image.FromStream(ms));
-                    lvImages.Items.Add(item);
+                    foreach(string file in openFileDialog.FileNames)
+                    {
+                        string imagePath = file;
+                        string key = Guid.NewGuid().ToString();
+                        ListViewItem item = new ListViewItem();
+                        item.Tag = imagePath;
+                        item.Text = Path.GetFileName(imagePath);
+                        item.ImageKey = key;
+                        var image = SixLabors.ImageSharp.Image.Load(imagePath);
+                        MemoryStream ms = new MemoryStream();
+                        image.Save(ms, new JpegEncoder());
+                        lvImages.LargeImageList.Images.Add(key, Image.FromStream(ms));
+                        lvImages.Items.Add(item);
+                    }
+                    
                 }
             }
         }
@@ -270,11 +255,6 @@ namespace AutoriaWinForm.Forms
         private void txtBoxCarDecription_Click(object sender, EventArgs e)
         {
             txtBoxCarDecription.Text = string.Empty;
-        }
-
-        private void lblCarFilter_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtBoxPrice_TextChanged_1(object sender, EventArgs e)

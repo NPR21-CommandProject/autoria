@@ -27,11 +27,9 @@ namespace AutoriaWinForm.Data.Entities
         public string EngineCapacity { get; set; }
         [Required]
         public string FuelType { get; set; }
-        [Required, StringLength(200)]
-        public string PhotoDescription { get; set; }
         [Required, StringLength(1500)]
         public string CarDescription { get; set; }
-        [Required, StringLength(1500)]
+        [Required]
         public DateTime DateCreated { get; set; }
         public virtual ICollection<CarImageEntity> CarImages { get; set; }
     }

@@ -81,7 +81,6 @@
             label1.Size = new Size(128, 28);
             label1.TabIndex = 3;
             label1.Text = "Vehicle type";
-            label1.Click += label1_Click;
             // 
             // vehicleMarkBox
             // 
@@ -174,7 +173,7 @@
             // 
             txtBoxCarDecription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             txtBoxCarDecription.ForeColor = Color.Gray;
-            txtBoxCarDecription.Location = new Point(448, 473);
+            txtBoxCarDecription.Location = new Point(448, 519);
             txtBoxCarDecription.Margin = new Padding(3, 4, 3, 4);
             txtBoxCarDecription.Multiline = true;
             txtBoxCarDecription.Name = "txtBoxCarDecription";
@@ -233,7 +232,6 @@
             label7.Size = new Size(547, 81);
             label7.TabIndex = 33;
             label7.Text = "Added car for sale";
-            label7.Click += label7_Click_1;
             // 
             // label8
             // 
@@ -327,7 +325,7 @@
             // 
             lvImages.Location = new Point(448, 156);
             lvImages.Name = "lvImages";
-            lvImages.Size = new Size(885, 273);
+            lvImages.Size = new Size(885, 337);
             lvImages.TabIndex = 42;
             lvImages.UseCompatibleStateImageBehavior = false;
             lvImages.ItemDrag += lvImages_ItemDrag;
