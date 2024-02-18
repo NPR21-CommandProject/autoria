@@ -54,7 +54,7 @@ namespace AutoriaWinForm.Data
                 short i = 1;
                 foreach (string url in images)
                 {
-                    var fileName = ImageWorker.ImageSave(url, car.Model);
+                    var fileName = ImageWorker.ImageSaveUrl(url, car.Model);
                     CarImageEntity carImage = new CarImageEntity
                     {
                         Name = fileName,
