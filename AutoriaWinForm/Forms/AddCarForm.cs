@@ -61,7 +61,7 @@ namespace AutoriaWinForm.Forms
 
         private void lvImages_DragOver(object sender, DragEventArgs e)
         {
-            // Retrieve the client coordinates of the mouse pointer.
+            // Retrieve the client coordinates of the mouse pointer..
             Point targetPoint =
                 lvImages.PointToClient(new Point(e.X, e.Y));
 
