@@ -18,14 +18,18 @@ namespace AutoriaWinForm.Data.Entities
         [Required, StringLength(200)]
         public string Model { get; set; }
         [Required, StringLength(200)]
-        public int Price { get; set; }
-        [Required]
+        public string VehicleType { get; set; }
+        [Required, StringLength(200)]
+        public string Price { get; set; }
+        [Required, StringLength(50)]
         public string Odometer { get; set; }
-        [Required]
-        public int EngineCapacity { get; set; }
+        [Required, StringLength(50)]
+        public string EngineCapacity { get; set; }
         [Required]
         public string FuelType { get; set; }
-        [Required, StringLength(200)]
+        [Required, StringLength(1500)]
+        public string CarDescription { get; set; }
+        [Required]
         public DateTime DateCreated { get; set; }
         public virtual ICollection<CarImageEntity> CarImages { get; set; }
     }
