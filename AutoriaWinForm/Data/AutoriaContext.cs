@@ -13,6 +13,7 @@ namespace AutoriaWinForm.Data
     {
         public DbSet<UserEntity> Users { get; set; }
         public DbSet<CarEntity> Cars { get; set; }
+        public DbSet<CarImageEntity> CarImages { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

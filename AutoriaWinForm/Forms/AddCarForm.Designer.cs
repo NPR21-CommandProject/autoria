@@ -29,63 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCarForm));
-            txtBoxPhotoDecription = new TextBox();
-            vehicleTipeBox = new ComboBox();
+            cbVehicleType = new ComboBox();
             label1 = new Label();
-            vehicleMarkBox = new ComboBox();
+            cbBrand = new ComboBox();
             label2 = new Label();
             label3 = new Label();
-            vehicleModelBox = new ComboBox();
+            cbModel = new ComboBox();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            Cancel = new TextBox();
+            txtCarDecription = new TextBox();
             btnAccept = new Button();
             btnCancel = new Button();
-            comboBox1 = new ComboBox();
-            txtPriceMax = new TextBox();
-            txtOdoMin = new TextBox();
-            txtOdoMax = new TextBox();
-            comboBox2 = new ComboBox();
-            txtCapMin = new TextBox();
-            txtCapMax = new TextBox();
-            comboBox3 = new ComboBox();
             pictureBox1 = new PictureBox();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
-            txtPriceMin = new TextBox();
-            textBox1 = new TextBox();
-            comboBox5 = new ComboBox();
+            label10 = new Label();
+            txtPrice = new TextBox();
+            txtOdometer = new TextBox();
+            txtEngineCapacity = new TextBox();
+            txtFuelType = new TextBox();
+            lvImages = new ListView();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // txtBoxPhotoDecription
+            // cbVehicleType
             // 
-            txtBoxPhotoDecription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtBoxPhotoDecription.ForeColor = Color.Gray;
-            txtBoxPhotoDecription.Location = new Point(392, 117);
-            txtBoxPhotoDecription.Multiline = true;
-            txtBoxPhotoDecription.Name = "txtBoxPhotoDecription";
-            txtBoxPhotoDecription.Size = new Size(775, 174);
-            txtBoxPhotoDecription.TabIndex = 1;
-            txtBoxPhotoDecription.Text = "Photo decription";
-            txtBoxPhotoDecription.TextChanged += textBox1_TextChanged_1;
-            // 
-            // vehicleTipeBox
-            // 
-            vehicleTipeBox.AccessibleName = "";
-            vehicleTipeBox.DisplayMember = "All types of vehicles";
-            vehicleTipeBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            vehicleTipeBox.ForeColor = Color.Gray;
-            vehicleTipeBox.FormattingEnabled = true;
-            vehicleTipeBox.Items.AddRange(new object[] { "Passenger cars", "", "Motorcycles", "", "Trucks", "", "Trailers", "", "Special equipment", "", "Agricultural machinery", "", "Buses", "", "Water transport", "", "Air transport", "", "Motor homes" });
-            vehicleTipeBox.Location = new Point(34, 294);
-            vehicleTipeBox.Name = "vehicleTipeBox";
-            vehicleTipeBox.Size = new Size(273, 23);
-            vehicleTipeBox.TabIndex = 2;
-            vehicleTipeBox.Text = "All vehicle";
-            vehicleTipeBox.SelectedIndexChanged += vehicleTipeBox_SelectedIndexChanged;
+            cbVehicleType.AccessibleName = "";
+            cbVehicleType.DisplayMember = "All types of vehicles";
+            cbVehicleType.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cbVehicleType.ForeColor = Color.Gray;
+            cbVehicleType.FormattingEnabled = true;
+            cbVehicleType.Items.AddRange(new object[] { "Passenger cars", "", "Motorcycles", "", "Trucks", "", "Trailers", "", "Special equipment", "", "Agricultural machinery", "", "Buses", "", "Water transport", "", "Air transport", "", "Motor homes" });
+            cbVehicleType.Location = new Point(39, 392);
+            cbVehicleType.Margin = new Padding(3, 4, 3, 4);
+            cbVehicleType.Name = "cbVehicleType";
+            cbVehicleType.Size = new Size(311, 28);
+            cbVehicleType.TabIndex = 2;
+            cbVehicleType.Text = "All vehicle";
             // 
             // label1
             // 
@@ -93,24 +75,24 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(34, 270);
+            label1.Location = new Point(39, 360);
             label1.Name = "label1";
-            label1.Size = new Size(104, 21);
+            label1.Size = new Size(244, 28);
             label1.TabIndex = 3;
-            label1.Text = "Vehicle type";
-            label1.Click += label1_Click;
+            label1.Text = "Тип засобу(мотоцикол)";
             // 
-            // vehicleMarkBox
+            // cbBrand
             // 
-            vehicleMarkBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            vehicleMarkBox.ForeColor = Color.Gray;
-            vehicleMarkBox.FormattingEnabled = true;
-            vehicleMarkBox.Items.AddRange(new object[] { "BMW", "Ford", "Toyota", "Chevrolet", "Honda", "Hyundai", "Volkswagen", "Audi", "Bentley", "Dodge", "Nissan", "Daimler AG", "Ferrari", "Fisker", "Jeep", "Mazda", "Subaru", "Acura", "American Motors", "Bugatti", "Cadillac", "Chrysler", "DeLorean", "Geely" });
-            vehicleMarkBox.Location = new Point(34, 341);
-            vehicleMarkBox.Name = "vehicleMarkBox";
-            vehicleMarkBox.Size = new Size(273, 23);
-            vehicleMarkBox.TabIndex = 4;
-            vehicleMarkBox.Text = "All brand";
+            cbBrand.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cbBrand.ForeColor = Color.Gray;
+            cbBrand.FormattingEnabled = true;
+            cbBrand.Items.AddRange(new object[] { "BMW", "Ford", "Toyota", "Chevrolet", "Honda", "Hyundai", "Volkswagen", "Audi", "Bentley", "Dodge", "Nissan", "Daimler AG", "Ferrari", "Fisker", "Jeep", "Mazda", "Subaru", "Acura", "American Motors", "Bugatti", "Cadillac", "Chrysler", "DeLorean", "Geely" });
+            cbBrand.Location = new Point(39, 455);
+            cbBrand.Margin = new Padding(3, 4, 3, 4);
+            cbBrand.Name = "cbBrand";
+            cbBrand.Size = new Size(311, 28);
+            cbBrand.TabIndex = 4;
+            cbBrand.Text = "All brand";
             // 
             // label2
             // 
@@ -118,11 +100,11 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(34, 317);
+            label2.Location = new Point(39, 423);
             label2.Name = "label2";
-            label2.Size = new Size(84, 21);
+            label2.Size = new Size(130, 28);
             label2.TabIndex = 5;
-            label2.Text = "Car brand";
+            label2.Text = "Бренд(Audi)";
             // 
             // label3
             // 
@@ -130,22 +112,23 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(34, 365);
+            label3.Location = new Point(39, 487);
             label3.Name = "label3";
-            label3.Size = new Size(59, 21);
+            label3.Size = new Size(89, 28);
             label3.TabIndex = 7;
-            label3.Text = "Model";
+            label3.Text = "Модель";
             // 
-            // vehicleModelBox
+            // cbModel
             // 
-            vehicleModelBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            vehicleModelBox.ForeColor = Color.Gray;
-            vehicleModelBox.FormattingEnabled = true;
-            vehicleModelBox.Location = new Point(34, 389);
-            vehicleModelBox.Name = "vehicleModelBox";
-            vehicleModelBox.Size = new Size(273, 23);
-            vehicleModelBox.TabIndex = 6;
-            vehicleModelBox.Text = "All models";
+            cbModel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            cbModel.ForeColor = Color.Gray;
+            cbModel.FormattingEnabled = true;
+            cbModel.Location = new Point(39, 519);
+            cbModel.Margin = new Padding(3, 4, 3, 4);
+            cbModel.Name = "cbModel";
+            cbModel.Size = new Size(311, 28);
+            cbModel.TabIndex = 6;
+            cbModel.Text = "All models";
             // 
             // label4
             // 
@@ -153,11 +136,11 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(34, 416);
+            label4.Location = new Point(39, 555);
             label4.Name = "label4";
-            label4.Size = new Size(48, 21);
+            label4.Size = new Size(57, 28);
             label4.TabIndex = 8;
-            label4.Text = "Price";
+            label4.Text = "Ціна";
             // 
             // label5
             // 
@@ -165,11 +148,11 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(34, 464);
+            label5.Location = new Point(39, 633);
             label5.Name = "label5";
-            label5.Size = new Size(87, 21);
+            label5.Size = new Size(77, 28);
             label5.TabIndex = 12;
-            label5.Text = "Odometer";
+            label5.Text = "Пробіг";
             // 
             // label6
             // 
@@ -177,134 +160,61 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(34, 517);
+            label6.Location = new Point(39, 707);
             label6.Name = "label6";
-            label6.Size = new Size(152, 21);
+            label6.Size = new Size(156, 28);
             label6.TabIndex = 18;
-            label6.Text = "Engine capacity(l.)";
+            label6.Text = "Об'єм двигуна";
             // 
-            // Cancel
+            // txtCarDecription
             // 
-            Cancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            Cancel.ForeColor = Color.Gray;
-            Cancel.Location = new Point(392, 314);
-            Cancel.Multiline = true;
-            Cancel.Name = "Cancel";
-            Cancel.Size = new Size(775, 170);
-            Cancel.TabIndex = 21;
-            Cancel.Text = "Car description";
+            txtCarDecription.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            txtCarDecription.ForeColor = Color.Gray;
+            txtCarDecription.Location = new Point(449, 560);
+            txtCarDecription.Margin = new Padding(3, 4, 3, 4);
+            txtCarDecription.Multiline = true;
+            txtCarDecription.Name = "txtCarDecription";
+            txtCarDecription.Size = new Size(885, 220);
+            txtCarDecription.TabIndex = 21;
+            txtCarDecription.Text = "Car description";
             // 
             // btnAccept
             // 
             btnAccept.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             btnAccept.ForeColor = Color.Green;
-            btnAccept.Location = new Point(405, 517);
+            btnAccept.Location = new Point(448, 812);
+            btnAccept.Margin = new Padding(3, 4, 3, 4);
             btnAccept.Name = "btnAccept";
-            btnAccept.Size = new Size(107, 47);
+            btnAccept.Size = new Size(122, 63);
             btnAccept.TabIndex = 22;
             btnAccept.Text = "Confirm";
             btnAccept.UseVisualStyleBackColor = true;
+            btnAccept.Click += btnAccept_Click;
             // 
             // btnCancel
             // 
             btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             btnCancel.ForeColor = Color.Red;
-            btnCancel.Location = new Point(1056, 517);
+            btnCancel.Location = new Point(1207, 825);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(111, 47);
+            btnCancel.Size = new Size(127, 63);
             btnCancel.TabIndex = 23;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "$", "€", "₴" });
-            comboBox1.Location = new Point(266, 440);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(41, 23);
-            comboBox1.TabIndex = 24;
-            comboBox1.Text = "$";
-            // 
-            // txtPriceMax
-            // 
-            txtPriceMax.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtPriceMax.ForeColor = Color.Gray;
-            txtPriceMax.Location = new Point(144, 440);
-            txtPriceMax.Name = "txtPriceMax";
-            txtPriceMax.Size = new Size(104, 23);
-            txtPriceMax.TabIndex = 25;
-            txtPriceMax.Text = "To";
-            // 
-            // txtOdoMin
-            // 
-            txtOdoMin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtOdoMin.ForeColor = Color.Gray;
-            txtOdoMin.Location = new Point(34, 488);
-            txtOdoMin.Name = "txtOdoMin";
-            txtOdoMin.Size = new Size(104, 23);
-            txtOdoMin.TabIndex = 26;
-            txtOdoMin.Text = "From";
-            // 
-            // txtOdoMax
-            // 
-            txtOdoMax.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtOdoMax.ForeColor = Color.Gray;
-            txtOdoMax.Location = new Point(144, 488);
-            txtOdoMax.Name = "txtOdoMax";
-            txtOdoMax.Size = new Size(104, 23);
-            txtOdoMax.TabIndex = 27;
-            txtOdoMax.Text = "To";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "km", "mi" });
-            comboBox2.Location = new Point(266, 488);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(41, 23);
-            comboBox2.TabIndex = 28;
-            comboBox2.Text = "km";
-            // 
-            // txtCapMin
-            // 
-            txtCapMin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtCapMin.ForeColor = Color.Gray;
-            txtCapMin.Location = new Point(34, 541);
-            txtCapMin.Name = "txtCapMin";
-            txtCapMin.Size = new Size(104, 23);
-            txtCapMin.TabIndex = 29;
-            txtCapMin.Text = "From";
-            // 
-            // txtCapMax
-            // 
-            txtCapMax.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtCapMax.ForeColor = Color.Gray;
-            txtCapMax.Location = new Point(144, 541);
-            txtCapMax.Name = "txtCapMax";
-            txtCapMax.Size = new Size(104, 23);
-            txtCapMax.TabIndex = 30;
-            txtCapMax.Text = "To";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "l", "g" });
-            comboBox3.Location = new Point(266, 541);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(41, 23);
-            comboBox3.TabIndex = 31;
-            comboBox3.Text = "l";
+            btnCancel.Click += btnCancel_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(34, 117);
+            pictureBox1.Location = new Point(39, 156);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(273, 145);
+            pictureBox1.Size = new Size(312, 193);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 32;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pctrCar_Click;
             // 
             // label7
             // 
@@ -312,12 +222,11 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(444, 25);
+            label7.Location = new Point(688, 17);
             label7.Name = "label7";
-            label7.Size = new Size(438, 65);
+            label7.Size = new Size(547, 81);
             label7.TabIndex = 33;
             label7.Text = "Added car for sale";
-            label7.Click += label7_Click_1;
             // 
             // label8
             // 
@@ -325,9 +234,9 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(444, 665);
+            label8.Location = new Point(688, 901);
             label8.Name = "label8";
-            label8.Size = new Size(335, 17);
+            label8.Size = new Size(432, 23);
             label8.TabIndex = 34;
             label8.Text = "(с)This site was developed by a team of young tigers";
             // 
@@ -337,79 +246,118 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(34, 37);
+            label9.Location = new Point(88, 33);
             label9.Name = "label9";
-            label9.Size = new Size(196, 50);
+            label9.Size = new Size(246, 62);
             label9.TabIndex = 35;
             label9.Text = "Car Filtres";
             // 
-            // txtPriceMin
+            // label10
             // 
-            txtPriceMin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            txtPriceMin.ForeColor = Color.Gray;
-            txtPriceMin.Location = new Point(34, 440);
-            txtPriceMin.Name = "txtPriceMin";
-            txtPriceMin.Size = new Size(104, 23);
-            txtPriceMin.TabIndex = 9;
-            txtPriceMin.Text = "From";
+            label10.AutoSize = true;
+            label10.BackColor = Color.Transparent;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(39, 785);
+            label10.Name = "label10";
+            label10.Size = new Size(125, 28);
+            label10.TabIndex = 36;
+            label10.Text = "Тип палива";
             // 
-            // textBox1
+            // txtPrice
             // 
-            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox1.ForeColor = Color.Gray;
-            textBox1.Location = new Point(34, 587);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(214, 23);
-            textBox1.TabIndex = 36;
-            textBox1.Text = "Cost";
+            txtPrice.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            txtPrice.ForeColor = Color.Gray;
+            txtPrice.Location = new Point(39, 587);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Multiline = true;
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(311, 41);
+            txtPrice.TabIndex = 38;
+            txtPrice.Text = "in uah";
             // 
-            // comboBox5
+            // txtOdometer
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "$", "€", "₴" });
-            comboBox5.Location = new Point(266, 587);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(41, 23);
-            comboBox5.TabIndex = 38;
-            comboBox5.Text = "$";
+            txtOdometer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            txtOdometer.ForeColor = Color.Gray;
+            txtOdometer.Location = new Point(39, 660);
+            txtOdometer.Margin = new Padding(3, 4, 3, 4);
+            txtOdometer.Multiline = true;
+            txtOdometer.Name = "txtOdometer";
+            txtOdometer.Size = new Size(311, 41);
+            txtOdometer.TabIndex = 39;
+            txtOdometer.Text = "in km";
+            // 
+            // txtEngineCapacity
+            // 
+            txtEngineCapacity.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            txtEngineCapacity.ForeColor = Color.Gray;
+            txtEngineCapacity.Location = new Point(39, 739);
+            txtEngineCapacity.Margin = new Padding(3, 4, 3, 4);
+            txtEngineCapacity.Multiline = true;
+            txtEngineCapacity.Name = "txtEngineCapacity";
+            txtEngineCapacity.Size = new Size(311, 41);
+            txtEngineCapacity.TabIndex = 40;
+            txtEngineCapacity.Text = "in litres";
+            // 
+            // txtFuelType
+            // 
+            txtFuelType.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            txtFuelType.ForeColor = Color.Gray;
+            txtFuelType.Location = new Point(39, 825);
+            txtFuelType.Margin = new Padding(3, 4, 3, 4);
+            txtFuelType.Multiline = true;
+            txtFuelType.Name = "txtFuelType";
+            txtFuelType.Size = new Size(311, 41);
+            txtFuelType.TabIndex = 41;
+            txtFuelType.Text = "input type";
+            // 
+            // lvImages
+            // 
+            lvImages.Location = new Point(448, 156);
+            lvImages.Name = "lvImages";
+            lvImages.Size = new Size(885, 356);
+            lvImages.TabIndex = 42;
+            lvImages.UseCompatibleStateImageBehavior = false;
+            lvImages.ItemDrag += lvImages_ItemDrag;
+            lvImages.DragDrop += lvImages_DragDrop;
+            lvImages.DragEnter += lvImages_DragEnter;
+            lvImages.DragOver += lvImages_DragOver;
+            lvImages.DragLeave += lvImages_DragLeave;
             // 
             // AddCarForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Orange;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1280, 720);
-            Controls.Add(comboBox5);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1463, 960);
+            Controls.Add(lvImages);
+            Controls.Add(txtFuelType);
+            Controls.Add(txtEngineCapacity);
+            Controls.Add(txtOdometer);
+            Controls.Add(txtPrice);
+            Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(pictureBox1);
-            Controls.Add(comboBox3);
-            Controls.Add(txtCapMax);
-            Controls.Add(txtCapMin);
-            Controls.Add(comboBox2);
-            Controls.Add(txtOdoMax);
-            Controls.Add(txtOdoMin);
-            Controls.Add(txtPriceMax);
-            Controls.Add(comboBox1);
             Controls.Add(btnCancel);
             Controls.Add(btnAccept);
-            Controls.Add(Cancel);
+            Controls.Add(txtCarDecription);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(txtPriceMin);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(vehicleModelBox);
+            Controls.Add(cbModel);
             Controls.Add(label2);
-            Controls.Add(vehicleMarkBox);
+            Controls.Add(cbBrand);
             Controls.Add(label1);
-            Controls.Add(vehicleTipeBox);
-            Controls.Add(txtBoxPhotoDecription);
+            Controls.Add(cbVehicleType);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AddCarForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddCarForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -419,13 +367,12 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private TextBox txtBoxPhotoDecription;
-        private ComboBox vehicleTipeBox;
+        private ComboBox cbVehicleType;
         private Label label1;
-        private ComboBox vehicleMarkBox;
+        private ComboBox cbBrand;
         private Label label2;
         private Label label3;
-        private ComboBox vehicleModelBox;
+        private ComboBox cbModel;
         private Label label4;
         private Label label5;
         private TextBox txtOdometerMin;
@@ -433,22 +380,18 @@
         private TextBox textBox6;
         private TextBox txt;
         private Label label6;
-        private TextBox Cancel;
+        private TextBox txtCarDecription;
         private Button btnAccept;
         private Button btnCancel;
-        private ComboBox comboBox1;
-        private TextBox txtPriceMax;
-        private TextBox txtOdoMin;
-        private TextBox txtOdoMax;
-        private ComboBox comboBox2;
-        private TextBox txtCapMin;
-        private TextBox txtCapMax;
-        private ComboBox comboBox3;
+        private TextBox txtOdo;
         private Label label7;
         private Label label8;
         private Label label9;
-        private TextBox txtPriceMin;
-        private TextBox textBox1;
-        private ComboBox comboBox5;
+        private Label label10;
+        private TextBox txtPrice;
+        private TextBox txtOdometer;
+        private TextBox txtEngineCapacity;
+        private TextBox txtFuelType;
+        private ListView lvImages;
     }
 }
