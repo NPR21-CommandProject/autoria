@@ -18,7 +18,7 @@ namespace AutoriaWinForm
     public partial class ItemForm : Form
     {
         //id Авто, яке ми хочемо переглянуть
-        public int CarId { get; set; } = 5;
+        public int CarId { get; set; }// = 5;
         private readonly AutoriaContext autoriaContext = new AutoriaContext();
         string[] images;
         int current = 0;
@@ -26,6 +26,22 @@ namespace AutoriaWinForm
         {
             InitializeComponent();
 
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRightImage_Click(object sender, EventArgs e)
+        {
+            current++;
+            pbCarImage.Image = Image.FromStream(ImageWorker.GetFileStream(images[current]));
+        }
+
+        private void ItemForm_Load(object sender, EventArgs e)
+        {
             var car = autoriaContext.Cars
                 .Include(x => x.CarImages)
                 .SingleOrDefault(x => x.Id == CarId);

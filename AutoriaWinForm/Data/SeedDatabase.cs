@@ -30,7 +30,7 @@ namespace AutoriaWinForm.Data
                     Brand = "Audi",
                     FuelType = "Еклектро",
                     Model = "e-tron",
-                    EngineCapacity = 0,
+                    EngineCapacity ="0",
                     Odometer = "28 тис. км пробіг",
                     Price = 1522762,
                     DateCreated = DateTime.Now,
@@ -61,7 +61,7 @@ namespace AutoriaWinForm.Data
                 short i = 1;
                 foreach (string url in images)
                 {
-                    var fileName = ImageWorker.ImageSave(url, car.Model);
+                    var fileName = ImageWorker.ImageSaveUrl(url, car.Model);
                     CarImageEntity carImage = new CarImageEntity
                     {
                         Name = fileName,

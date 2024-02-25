@@ -4,6 +4,7 @@ using AutoriaWinForm.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutoriaWinForm.Migrations
 {
     [DbContext(typeof(AutoriaContext))]
-    partial class AutoriaContextModelSnapshot : ModelSnapshot
+    [Migration("20240218081519_Car remove ImageDescription")]
+    partial class CarremoveImageDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,9 +32,6 @@ namespace AutoriaWinForm.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("AddedByUserId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Brand")
                         .IsRequired()
@@ -76,8 +76,6 @@ namespace AutoriaWinForm.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AddedByUserId");
 
                     b.ToTable("tblCars");
                 });
@@ -150,15 +148,6 @@ namespace AutoriaWinForm.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("tblUsers");
-                });
-
-            modelBuilder.Entity("AutoriaWinForm.Data.Entities.CarEntity", b =>
-                {
-                    b.HasOne("AutoriaWinForm.Data.Entities.UserEntity", "AddedByUser")
-                        .WithMany()
-                        .HasForeignKey("AddedByUserId");
-
-                    b.Navigation("AddedByUser");
                 });
 
             modelBuilder.Entity("AutoriaWinForm.Data.Entities.CarImageEntity", b =>

@@ -19,9 +19,14 @@ namespace AutoriaWinForm
            // SeedDatabase seedDatabase = new SeedDatabase();
            // seedDatabase.SeedCar();
 
-            Application.Run(new ItemForm());
+            //Application.Run(new AddCarForm());
 
-            
+            ItemForm form = new ItemForm();
+            form.CarId = 8;
+            Application.Run(form);
+            //form.ShowDialog();
+
+
         }
     }
 }
