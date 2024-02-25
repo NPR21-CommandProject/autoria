@@ -68,7 +68,7 @@ namespace Autoria.Helpers
         }
 
         public static Stream GetFileStream(string path)
-        {
+        { 
             using (var image = Image.Load(path))
             {
 
