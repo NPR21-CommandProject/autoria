@@ -138,12 +138,12 @@ namespace AutoriaWinForm
                 if (user != null && password == user.Password)
                 {
                     Close();
-                    Application.Run(new MainPageForm());
+
                 }
                 else
                 {
                     MessageBox.Show("Error");
-                   
+
                 }
             }
 
@@ -182,6 +182,11 @@ namespace AutoriaWinForm
             //            Console.WriteLine($"Помилка: {ex.Message}");
             //        }
             //    }
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

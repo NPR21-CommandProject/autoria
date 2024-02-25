@@ -15,7 +15,7 @@ namespace AutoriaWinForm.Data.Entities
         public int Id { get; set; }
         [Required, StringLength(200)]
         public string Brand { get; set; }
-        [Required, StringLength(200)]
+        [Required, StringLength(200)] 
         public string Model { get; set; }
         [Required, StringLength(200)]
         public string VehicleType { get; set; }

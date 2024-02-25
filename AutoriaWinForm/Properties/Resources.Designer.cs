@@ -63,6 +63,16 @@ namespace AutoriaWinForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _149452 {
+            get {
+                object obj = ResourceManager.GetObject("149452", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photo_2024_01_27_16_46_56 {
             get {
                 object obj = ResourceManager.GetObject("photo_2024-01-27_16-46-56", resourceCulture);

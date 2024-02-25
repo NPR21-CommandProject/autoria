@@ -50,10 +50,8 @@
             VlmFrom_textBox = new TextBox();
             label7 = new Label();
             dataGridView = new DataGridView();
-            pictureBox1 = new PictureBox();
-            label8 = new Label();
+            LoginBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // vScrollBar1
@@ -71,6 +69,7 @@
             Exit_btn.TabIndex = 5;
             Exit_btn.Text = "Exit";
             Exit_btn.UseVisualStyleBackColor = true;
+            Exit_btn.Click += Exit_btn_Click;
             // 
             // Sell_btn
             // 
@@ -80,6 +79,7 @@
             Sell_btn.TabIndex = 6;
             Sell_btn.Text = "Sell car";
             Sell_btn.UseVisualStyleBackColor = true;
+            Sell_btn.Click += Sell_btn_Click;
             // 
             // SearchTextBox
             // 
@@ -283,35 +283,26 @@
             dataGridView.ReadOnly = true;
             dataGridView.Size = new Size(1050, 485);
             dataGridView.TabIndex = 25;
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
             // 
-            // pictureBox1
+            // LoginBtn
             // 
-            pictureBox1.Location = new Point(23, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(47, 43);
-            pictureBox1.TabIndex = 26;
-            pictureBox1.TabStop = false;
+            LoginBtn.Location = new Point(26, 12);
+            LoginBtn.Name = "LoginBtn";
+            LoginBtn.Size = new Size(132, 30);
+            LoginBtn.TabIndex = 26;
+            LoginBtn.Text = "Login";
+            LoginBtn.UseVisualStyleBackColor = true;
+            LoginBtn.Click += LoginBtn_Click;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label8.ForeColor = SystemColors.ControlLight;
-            label8.Location = new Point(76, 12);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 37);
-            label8.TabIndex = 27;
-            label8.Text = "User";
-            // 
-            // MainForm
+            // MainPageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlText;
             BackgroundImage = Properties.Resources.photo_2024_01_27_16_46_561;
             ClientSize = new Size(1421, 619);
-            Controls.Add(label8);
-            Controls.Add(pictureBox1);
+            Controls.Add(LoginBtn);
             Controls.Add(dataGridView);
             Controls.Add(VlmTo_textBox);
             Controls.Add(VlmFrom_textBox);
@@ -335,10 +326,10 @@
             Controls.Add(Exit_btn);
             Controls.Add(vScrollBar1);
             ForeColor = SystemColors.ControlText;
-            Name = "MainForm";
+            Name = "MainPageForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -366,7 +357,6 @@
         private TextBox VlmFrom_textBox;
         private Label label7;
         private DataGridView dataGridView;
-        private PictureBox pictureBox1;
-        private Label label8;
+        private Button LoginBtn;
     }
 }
