@@ -36,6 +36,7 @@
             label2 = new Label();
             pbTiger = new PictureBox();
             button1 = new Button();
+            CloseBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pbTiger).BeginInit();
             SuspendLayout();
             // 
@@ -90,10 +91,19 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // CloseBtn
+            // 
+            CloseBtn.BackColor = Color.IndianRed;
+            resources.ApplyResources(CloseBtn, "CloseBtn");
+            CloseBtn.Name = "CloseBtn";
+            CloseBtn.UseVisualStyleBackColor = false;
+            CloseBtn.Click += CloseBtn_Click;
+            // 
             // LoginForm
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(CloseBtn);
             Controls.Add(button1);
             Controls.Add(pbTiger);
             Controls.Add(label2);
@@ -118,5 +128,6 @@
         private Label label2;
         private PictureBox pbTiger;
         private Button button1;
+        private Button CloseBtn;
     }
 }
